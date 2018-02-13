@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DASC Bank Ltd.</title>
+        <link rel="stylesheet" href="basicstyle.css" />
+    </head>
+
+    <body>
+<div id="cssmenu">
+<ul>
+    <li><a href="index.html">DASC Bank</a></li>
+    <li>
+        <a href="#">Customers</a>
+        <ul>
+            <li><a href="http://localhost:8080/addcustomer.html">Add new customer</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/customers/">View customers</a></li>
+            <li><a href="http://localhost:8080/viewcustomerbyid.html">View customer by ID</a></li>
+            <li><a href="http://localhost:8080/deletecustomer.html">Delete Customer by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Accounts</a>
+        <ul>
+            <li><a href="http://localhost:8080/addaccount.html">Add a new account</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/accounts/">View accounts</a></li>
+            <li><a href="http://localhost:8080/viewaccountbyid.html">View account by ID</a></li>
+            <li><a href="http://localhost:8080/deleteaccount.html">Delete Account by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Balances</a>
+        <ul>
+            <li><a href="http://localhost:8080/displaybalance.html">Balance by Acc Id</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Misc</a>
+        <ul>
+            <li><a href="searchcustomer.html">Search customer form</a></li>
+            <li><a href="searchcustomerget.html">Search customer form GET</a></li>
+            <li><a href="http://localhost:8080/transactionform.html">Transaction form</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
+<script type="text/javascript">
+$("#cssmenu").menumaker({
+    title: "Menu",
+    format: "multitoggle"
+});
+</script>
+
+
+
+<hr />
+
+    <h2>View Account by ID using FORM</h2>
+    <p style="width:600px;background-color:#ff0;">You will need to know the ACCOUNT ID first - you can get this 
+from clicking on  <strong>View Accounts</strong> in the Customers column above. Then enter it here and click
+    View.</p>
+        <form method="post" action="http://localhost:8080/webapi-V10/accounts/byid">
+
+            <table width="400">
+                <tr>
+                    <td width="100">Enter id: </td>
+                    <td width="300">
+<input type="text" name="accountId" />
+</td>
+                </tr>
+
+                <tr>
+					<td width="100">&nbsp;</td>
+                    <td width="300">
+<input type ="submit" value="View Account" />
+</td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

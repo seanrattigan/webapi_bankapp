@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DASC Bank Ltd.</title>
+        <link rel="stylesheet" href="basicstyle.css" />
+    </head>
+
+    <body>
+        <h1>DASC Bank App V10!!</h1>
+        <!-- in no particular order :-) Daragh, Ajitha, Sean & Chen Bank-->
+
+<div id="cssmenu">
+<ul>
+    <li><a href="index.html">DASC Bank</a></li>
+    <li>
+        <a href="#">Customers</a>
+        <ul>
+            <li><a href="http://localhost:8080/addcustomer.html">Add new customer</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/customers/">View customers</a></li>
+            <li><a href="http://localhost:8080/viewcustomerbyid.html">View customer by ID</a></li>
+            <li><a href="http://localhost:8080/deletecustomer.html">Delete Customer by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Accounts</a>
+        <ul>
+            <li><a href="http://localhost:8080/addaccount.html">Add a new account</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/accounts/">View accounts</a></li>
+            <li><a href="http://localhost:8080/viewaccountbyid.html">View account by ID</a></li>
+            <li><a href="http://localhost:8080/deleteaccount.html">Delete Account by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Balances</a>
+        <ul>
+            <li><a href="http://localhost:8080/displaybalance.html">Balance by Acc Id</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Misc</a>
+        <ul>
+            <li><a href="searchcustomer.html">Search customer form</a></li>
+            <li><a href="searchcustomerget.html">Search customer form GET</a></li>
+            <li><a href="http://localhost:8080/transactionform.html">Transaction form</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
+<script type="text/javascript">
+$("#cssmenu").menumaker({
+    title: "Menu",
+    format: "multitoggle"
+});
+</script>
+
+
+
+<hr />
+
+
+
+        <p>** Generally speaking for viewing or deleting specific customers or accounts you WILL NEED to know the id in advance.</p>
+
+
+        <h2>Oddities that we haven't quite figured out</h2>
+        <ol>
+            <li>customerId in the accounts hashmap is a double rather than a long. Tried changing it across the board, seemed to work, but then customerID stopped existing in the
+                accounts hashmap</li>
+            <li>Deleting a customer currently doesn't delete associated accounts. It probably should?</li>
+
+        </ol>
+
+
+        <h2>An account can be tied to a user as follows:</h2>
+
+
+        <ol>
+            <li>When you start up there are four customers - ids 1 -> 4, basically the four of us. </li>
+            <li>For any newly added ones you could get these by viewing all Customers or All Accounts in advance and taking a note of same.</li>
+            <li>Click view customer by id and enter the ID num in the resultant form.</li>
+            <li>You'll then see a crude row with the name / address and two form buttons - first one will delete the customer, BUT the second one will add an account (of no type as yet) to that customer.</li>
+            <li>See that the Customer ID is passed to the form... this would more likely be a hidden field, but it WORKS!</li>
+            <li>Chen wrote some code on getting account Balance - NOTE you need the <strong>Account Number</strong> field to return the balance, <strong>not the account ID</strong></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DASC Bank Ltd.</title>
+        <link rel="stylesheet" href="basicstyle.css" />
+    </head>
+
+    <body>
+
+ <div id="cssmenu">
+<ul>
+    <li><a href="index.html">DASC Bank</a></li>
+    <li>
+        <a href="#">Customers</a>
+        <ul>
+            <li><a href="http://localhost:8080/addcustomer.html">Add new customer</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/customers/">View customers</a></li>
+            <li><a href="http://localhost:8080/viewcustomerbyid.html">View customer by ID</a></li>
+            <li><a href="http://localhost:8080/deletecustomer.html">Delete Customer by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Accounts</a>
+        <ul>
+            <li><a href="http://localhost:8080/addaccount.html">Add a new account</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/accounts/">View accounts</a></li>
+            <li><a href="http://localhost:8080/viewaccountbyid.html">View account by ID</a></li>
+            <li><a href="http://localhost:8080/deleteaccount.html">Delete Account by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Balances</a>
+        <ul>
+            <li><a href="http://localhost:8080/displaybalance.html">Balance by Acc Id</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Misc</a>
+        <ul>
+            <li><a href="searchcustomer.html">Search customer form</a></li>
+            <li><a href="searchcustomerget.html">Search customer form GET</a></li>
+            <li><a href="http://localhost:8080/transactionform.html">Transaction form</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
+<script type="text/javascript">
+$("#cssmenu").menumaker({
+    title: "Menu",
+    format: "multitoggle"
+});
+</script>
+
+
+
+<hr />
+
+        
+    <h2>Add Customer using FORM</h2>
+    
+
+
+    <form method="post" action="http://localhost:8080/webapi-V10/customers/">
+        <!--Enter ID: <input type="text" name="customerId" />
+<br /> -->
+
+        <table>
+            <tr>
+                <td width="300">Enter Name: </td>
+                <td width="300">
+<input type="text" name="name" />
+</td>
+            </tr>
+            <tr>
+                <td width="300">Enter Address: </td>
+                <td width="300">
+<textarea name="address" >
+</textarea>
+</td>
+            </tr>
+            <tr>
+                <td width="300">Email Address: </td>
+                <td width="300">
+<input type="text" name="email" />
+</td>
+            </tr>
+
+            <tr>
+                <td width="300">User ID: </td>
+                <td width="300">
+<input type="text" name="userid" />
+</td>
+            </tr>
+
+            <tr>
+                <td width="300">PIN: </td>
+                <td width="300">
+<input type="password" name="pin" />
+</td>
+            </tr>
+            <tr>
+                <td width="300">Account Type: </td>
+                <td width="300">
+<input type="radio" name="accounttype" value="current" /> Current<br />
+                    <input type="radio" name="accounttype" value="savings" /> Savings</td>
+            </tr>
+
+            <tr>
+
+                <td width="600" colspan="2">
+<input type ="submit" value="GO" />
+</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

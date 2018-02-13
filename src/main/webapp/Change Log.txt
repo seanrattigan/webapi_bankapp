@@ -1,0 +1,19 @@
+FOUND BROKEN:
+
+Add ** ACCOUNT ** using FORM
+
+################################################################################
+CAHNGES MADE:
+
+transaction form.html
+Wording in form (semantic only)
+
+Account model
+Using method to validate sort code
+Alt method to create AccNum, visibly related to ID, to help with debug but may
+be useful for other.
+Added souts to methods
+
+Account Service- making accounts using the constructor- minimal params passed
+sort, bal, custID
+

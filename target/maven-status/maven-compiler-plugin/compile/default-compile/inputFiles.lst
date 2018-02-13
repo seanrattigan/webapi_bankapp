@@ -1,0 +1,16 @@
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/resources/CustomerResource.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/database/GenerateListCustomers.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/resources/TransactionResource.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/model/Account.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/database/DatabaseClass.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/service/BankService.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/model/Customer.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/service/AccountService.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/database/GenerateListTransactions.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/model/Transaction.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/model/Daragh.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/resources/BankServiceResource.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/database/commonHtml.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/resources/AccountResource.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/service/CustomerService.java
+/home/seanr/Desktop/JavaProgs/WebAPI/bankAppV10ip/src/main/java/com/mycompany/bankApp/service/TransactionService.java

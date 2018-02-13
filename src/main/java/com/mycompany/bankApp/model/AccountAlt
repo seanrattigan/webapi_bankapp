@@ -1,0 +1,61 @@
+/** Has a base account and an Id with easy to see ref to account
+
+public class Account {
+    private static long accBase = 100000000;
+    private static long idIdentifier = 268; // static class var to auto-assign id //sean
+    private long accountId;
+    private long accNum = 10000000;  // default 8-digit account num
+    private long sortCode = 987654; // default for online bank (no region) 6-diigt
+    private double curBalance;
+    private double customerId;
+    private Date dateCreated;
+
+    /**
+     * Default no-args constructor
+     */
+    public Account() {
+    }
+    
+    /**
+     * All args constructor.  Mainly used from Form
+     * Should check accNum does NOT exist before execution!
+     * @param fsortCode sortcode from form- may be dropdown in future
+     * @param curBalance opening balance
+     * @param customerId id of the customer with the account
+     */
+    public Account(long fsortCode, double curBalance, long customerId) {  
+        this.accNum = accBase + idIdentifier;
+        this.setSortCode(fsortCode);
+        this.curBalance = curBalance;
+        this.customerId = customerId;
+        this.accountId = idIdentifier++; //sean :  increments idIdentifier and assigns
+        this.dateCreated = new Date(); // sean : can be handy, and is free.
+        System.out.println("Account Form constructor called");  // debug only
+    }
+
+    /**
+     * Increments the account balance by the amount
+     * @param depositAmount cash deposited
+     * @return indication of success or failure
+     */
+    public boolean deposit(double depositAmount) {
+        this.curBalance += depositAmount;
+        System.out.println("Deposit Made");
+        return true;
+    }
+    
+    /**
+     * This method can be used for a withdrawal, as well as in the case of a
+     * fund transfer
+     * @param withdrawAmount the amount the customer wishes to withdraw
+     * @return a boolean indicating if the withdrawal was successful or not
+     */
+    public boolean withdraw(double withdrawAmount) {
+        if (withdrawAmount >= this.curBalance) {
+            this.curBalance -= withdrawAmount;
+            System.out.println("Account funds withdrawn");
+            return true;
+        }
+        System.out.println("Insufficient funds available"); // debug
+        return false;
+    }

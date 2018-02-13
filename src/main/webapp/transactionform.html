@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel ="stylesheet" href="basicstyle.css">
+    </head>
+    <body>
+
+         
+
+  <div id="cssmenu">
+<ul>
+    <li><a href="index.html">DASC Bank</a></li>
+    <li>
+        <a href="#">Customers</a>
+        <ul>
+            <li><a href="http://localhost:8080/addcustomer.html">Add new customer</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/customers/">View customers</a></li>
+            <li><a href="http://localhost:8080/viewcustomerbyid.html">View customer by ID</a></li>
+            <li><a href="http://localhost:8080/deletecustomer.html">Delete Customer by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Accounts</a>
+        <ul>
+            <li><a href="http://localhost:8080/addaccount.html">Add a new account</a></li>
+            <li><a href="http://localhost:8080/webapi-V10/accounts/">View accounts</a></li>
+            <li><a href="http://localhost:8080/viewaccountbyid.html">View account by ID</a></li>
+            <li><a href="http://localhost:8080/deleteaccount.html">Delete Account by ID</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Balances</a>
+        <ul>
+            <li><a href="http://localhost:8080/displaybalance.html">Balance by Acc Id</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Misc</a>
+        <ul>
+            <li><a href="searchcustomer.html">Search customer form</a></li>
+            <li><a href="searchcustomerget.html">Search customer form GET</a></li>
+            <li><a href="http://localhost:8080/transactionform.html">Transaction form</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
+<script type="text/javascript">
+$("#cssmenu").menumaker({
+    title: "Menu",
+    format: "multitoggle"
+});
+</script>
+
+
+
+<hr />
+
+
+        <h2>Search Customer by ID</h2>
+        
+        You must know the Customer ID in advance - to see this, click on View Customers under the Customers Menu.
+        <h1>Transaction Form V10</h1>
+<!--
+        What I was thinking here is this:
+        either have 3 form elements in the page, and select the one being used
+        all the params are sent to transaction
+        the constructor determines the action taken based on params
+        Main one is for transfer, but because the class requires 2 Accounts
+        if it is NOT a transfer, the simplest solution is to set the "to" account
+        to the same account.
+        Alternative would be to have a dropdown select the deposit/withdraw page
+        and have another page for the transfer?
+        Or have them as hidden divs with a select on an option to show the relevant
+        form, each with it's own submit
+        
+        First try is just for a deposit
+        Then withdraw
+        Then transfer
+        
+        (or the complete reverse of the 3)
+        -->
+        
+
+        <form method="post" action="http://localhost:8080/webapi-V10/transactions/">
+            <select name="operation">
+                <option value="">Select an option</option>
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+                <option value="transfer">Transfer</option>
+            </select>
+            <table>
+                <tr>
+                    <td width="300">Enter Account Number: </td>
+                    <td width="300"><input type="text" name="sourceAcc" /></td>
+                </tr>
+
+                <tr  id = "movemoney">
+                    <td width="300">Destination Account (if transfer): </td>
+                    <td width="300"><input type="text" name="destinationAcc" /></td>
+                </tr>
+
+                <tr>
+                    <td width="300">Transaction Amount: </td>
+                    <td width="300"><input type="text" name="transactionAmount" /></td>
+                </tr>
+                
+
+                <tr>
+                    <td width="300">User ID: </td>
+                    <td width="300"><input type="text" name="userid" /></td>
+                </tr>
+
+                <tr>
+                    <td width="300">PIN: </td>
+                    <td width="300"><input type="password" name="pin" /></td>
+                </tr>
+                <tr>
+                <tr>
+
+                    <td width="600" colspan="2"><input type ="submit" value="GO" /></td>
+                </tr>
+            </table>
+
+        </form>
+
+    </body>
+</html>
+
